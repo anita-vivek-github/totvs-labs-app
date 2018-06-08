@@ -1,0 +1,30 @@
+.main_container {
+    display:grid;
+    grid-gap: 30px;
+    grid-template-rows: auto;
+    grid-auto-columns: min-content;
+    grid-auto-rows: min-content;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-areas: 
+        "about_me about_me about_me about_me about_me about_me my_photos my_photos my_photos my_photos my_photos my_photos"
+        "about_me about_me about_me about_me about_me about_me my_photos my_photos my_photos my_photos my_photos my_photos"
+        "my_friend_feeds my_friend_feeds my_friend_feeds my_friend_feeds my_posts my_posts my_posts my_posts my_posts my_friends my_friends my_friends"
+        "my_friend_feeds my_friend_feeds my_friend_feeds my_friend_feeds my_posts my_posts my_posts my_posts my_posts my_friends my_friends my_friends"
+        "my_friend_feeds my_friend_feeds my_friend_feeds my_friend_feeds my_posts my_posts my_posts my_posts my_posts my_friends my_friends my_friends"
+        "my_friend_feeds my_friend_feeds my_friend_feeds my_friend_feeds my_posts my_posts my_posts my_posts my_posts my_friends my_friends my_friends"
+}
+.about_me {
+    grid-area: about_me;
+}
+.my_photos {
+    grid-area: my_photos;
+}
+.my_posts {
+    grid-area: my_posts;
+}
+.my_friend_feeds {
+    grid-area: my_friend_feeds;
+}
+.my_friends {
+    grid-area: my_friends;
+}

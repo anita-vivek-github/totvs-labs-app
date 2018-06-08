@@ -1,0 +1,9 @@
+.status_online {
+    color: limegreen;
+}
+.status_offline {
+    color: lightgray;
+}
+.private_message {
+    color: hsl(204, 86%, 53%);
+}

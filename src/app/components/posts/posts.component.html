@@ -1,0 +1,91 @@
+<article class="media" *ngFor="let post of _posts">
+  <figure class="media-left">
+    <p class="image is-64x64">
+      <img [src]="post.user.photo">
+    </p>
+  </figure>
+  <div class="media-content">
+    <div class="content">
+      <p>
+        <strong> {{ post.user.name }}</strong>
+        <small> {{ post.user.handle }} </small>
+        <br> {{ post.message }}
+      </p>
+    </div>
+    <nav class="level is-mobile">
+      <div class="level-left">
+        <a class="level-item">
+          <span class="icon is-small">
+            <i class="fas fa-reply"></i>
+          </span>
+        </a>
+        <a class="level-item">
+          <span class="icon is-small">
+            <i class="fas fa-heart"></i>
+          </span>
+        </a>
+        <p class="level-item">
+          <small>{{ post.postTime }}</small>
+        </p>
+      </div>
+    </nav>
+
+    <article class="media" *ngFor="let response of post.responses">
+      <figure class="media-left">
+        <p class="image is-48x48">
+          <img [src]="response.user.photo">
+        </p>
+      </figure>
+      <div class="media-content">
+        <div class="content">
+          <p>
+            <strong>{{ response.user.name }}</strong>
+            <small> {{ response.user.handle }} </small>
+            <br> {{ response.message }}
+          </p>
+        </div>
+        <nav class="level is-mobile">
+          <div class="level-left">
+            <a class="level-item">
+              <span class="icon is-small">
+                <i class="fas fa-reply"></i>
+              </span>
+            </a>
+            <a class="level-item">
+              <span class="icon is-small">
+                <i class="fas fa-heart"></i>
+              </span>
+            </a>
+            <p class="level-item">
+              <small>3 hrs</small>
+            </p>
+          </div>
+        </nav>
+
+        <article class="media" *ngFor="let resp of response.responses">
+          <figure class="media-left">
+            <p class="image is-48x48">
+              <img [src]="response.user.photo">
+            </p>
+          </figure>
+          <div class="media-content">
+            <div class="content">
+              <p>
+                <strong>{{ resp.user.name }}</strong>
+                <small> {{ resp.user.handle }} </small>
+                <br> {{ resp.message }}
+              </p>
+            </div>
+            <nav class="level is-mobile">
+              <div class="level-left">
+                <p class="level-item">
+                  <small>3 hrs</small>
+                </p>
+              </div>
+            </nav>
+          </div>
+        </article>
+      </div>
+    </article>
+  </div>
+</article>

@@ -1,0 +1,20 @@
+<div class="columns is-gapless">
+  <div class="column is-8">
+    <div class="card-image">
+      <figure class="image is-4by3">
+        <img [src]="_me.photo">
+      </figure>
+    </div>
+  </div>
+  <div class="column">
+    <div class="hero-body">
+      <div class="content">
+        <p><strong><h1 class="title-1 has-text-primary is-uppercase"> {{ _me.name }} </h1></strong></p>
+        <p><i><h5 class="has-text-grey-light">{{ _me.handle }}</h5></i></p>
+        <p><strong><span class="has-text-link">{{ _me.status }}</span></strong></p>
+        <div><h5 class="has-text-link">{{ _me.about }}</h5></div>
+        <div><strong><span class="has-text-link">{{ _myFriends.length }} Friends</span></strong></div>
+      </div>
+    </div>
+  </div>
+</div>

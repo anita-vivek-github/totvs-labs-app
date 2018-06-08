@@ -1,0 +1,39 @@
+<div style="display: grid;grid-gap:4px; margin: 0 auto;grid-template-columns: repeat(2, 1fr);">
+  <div *ngFor="let friend of _myFriends">
+    <div>
+      <figure class="image is-4by3">
+        <img [src]="friend.photo">
+      </figure>
+    </div>
+    <div class="card-content">
+      <div class="media">
+        <div class="media-content">
+          <h6>{{ friend.handle }}</h6>
+          <div class="level">
+            <div class="level-left">
+              <div class="level-item">
+                <span class="status_online" *ngIf="friend.online === true">
+                  <i class="fas fa-globe"></i>
+                </span>
+                <span class="status_offline" *ngIf="friend.online === false">
+                  <i class="fas fa-globe"></i>
+                </span>                
+              </div>
+              <div class="level-item">
+                <span class="private_message">
+                  <i class="fas fa-envelope"></i>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="content">
+        <h6>
+          {{ friend.status }}
+        </h6>
+
+      </div>
+    </div>
+  </div>
+</div>

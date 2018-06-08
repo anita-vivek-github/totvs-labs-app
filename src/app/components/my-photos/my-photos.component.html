@@ -1,0 +1,7 @@
+<div style="display: grid;grid-gap:3px; margin: 0 auto;grid-template-columns: repeat(4, 1fr);">
+    <div *ngFor="let photo of _photos">
+        <figure class="image is-square">
+          <img [src]="photo">
+        </figure>
+      </div>
+</div>
